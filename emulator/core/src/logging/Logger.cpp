@@ -6,7 +6,7 @@ const char* ToString(Category c) {
         case Category::CPU:return "CPU"; case Category::SPU:return "SPU"; case Category::GPU:return "GPU";
         case Category::VULKAN:return "VULKAN"; case Category::MEMORY:return "MEMORY"; case Category::OS:return "OS";
         case Category::LOADER:return "LOADER"; case Category::AUDIO:return "AUDIO"; case Category::INPUT:return "INPUT";
-        case Category::ANDROID:return "ANDROID"; case Category::GENERAL:return "GENERAL";
+        case Category::ANDROID_LOG:return "ANDROID"; case Category::GENERAL:return "GENERAL";
     } return "UNKNOWN";
 }
 const char* ToString(Level l) {
