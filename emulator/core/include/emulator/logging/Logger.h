@@ -7,7 +7,7 @@
 
 namespace emu::logging {
 
-enum class Category { CPU, SPU, GPU, VULKAN, MEMORY, OS, LOADER, AUDIO, INPUT, ANDROID, GENERAL };
+enum class Category { CPU, SPU, GPU, VULKAN, MEMORY, OS, LOADER, AUDIO, INPUT, ANDROID_LOG, GENERAL };
 enum class Level { Trace, Debug, Info, Warning, Error, Fatal };
 
 const char* ToString(Category category);
