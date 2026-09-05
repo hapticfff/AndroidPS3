@@ -1,13 +1,10 @@
 # AndroidPS3
 
-Open-source, independently implemented PlayStation 3 emulator targeting modern Android ARM64 devices.
+Open-source Android PlayStation 3 emulator project.
 
-## Current status — Milestone 2
+## Current milestone
+Milestone 2.1: PPU interpreter foundation connected to EmulatorCore.
 
-PPU foundation is present: architectural state, instruction decoding, a small deterministic integer/branch interpreter, CR0 record forms, and tests.
+This project contains no Sony firmware, encryption keys, proprietary operating-system code, or copyrighted game data.
 
-No Sony firmware, encryption keys, proprietary source, or copyrighted game data is included. Users provide legally obtained PS3 system software/game files themselves.
-
-### Next engineering step
-
-Wire the PPU interpreter into `EmulatorCore`, complete memory/load-store foundations, and make the Android CI build reproducible with a complete Gradle wrapper.
+The emulator is being developed incrementally with correctness-first testing and Android ARM64 as the primary target.
