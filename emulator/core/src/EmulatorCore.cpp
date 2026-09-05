@@ -4,7 +4,7 @@
 #include <sstream>
 
 #include "emulator/core/cpu/ppu/PPUBackend.h"
-#include "emulator/core/src/gpu/PlaceholderGpu.h"
+#include "gpu/PlaceholderGpu.h"
 #include "emulator/logging/Logger.h"
 
 namespace emu::core {
