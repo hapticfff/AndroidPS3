@@ -2,9 +2,9 @@ name: AndroidPS3 CI
 
 on:
   push:
-    branches: ["main", "milestone-2"]
+    branches: ["main", "milestone-2", "milestone-3-ui"]
   pull_request:
-    branches: ["main", "milestone-2"]
+    branches: ["main", "milestone-2", "milestone-3-ui"]
   workflow_dispatch:
 
 jobs:
