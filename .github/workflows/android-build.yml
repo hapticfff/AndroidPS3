@@ -1,10 +1,10 @@
-name: AndroidPS3 CI
+name: AetherPS3 CI
 
 on:
   push:
-    branches: ["main", "milestone-2"]
+    branches: ["main", "milestone-2", "milestone-3-ui", "aetherps3-rebuild"]
   pull_request:
-    branches: ["main", "milestone-2"]
+    branches: ["main", "milestone-2", "milestone-3-ui", "aetherps3-rebuild"]
   workflow_dispatch:
 
 jobs:
@@ -47,5 +47,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: androidps3-debug-apk
+          name: aetherps3-debug-apk
           path: android/app/build/outputs/apk/debug/*.apk
