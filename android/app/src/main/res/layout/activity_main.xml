@@ -30,69 +30,22 @@
                 android:orientation="horizontal"
                 android:paddingStart="7dp"
                 android:paddingEnd="7dp">
-
-                <TextView
-                    android:id="@+id/brandMark"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:background="#061A2C"
-                    android:gravity="center"
-                    android:text="AE"
-                    android:textColor="@android:color/white"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="9dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="AETHERPS3"
-                        android:textColor="@android:color/white"
-                        android:textSize="13sp"
-                        android:textStyle="bold" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:text="PLAY BEYOND"
-                        android:textColor="#7891A8"
-                        android:textSize="6sp" />
+                <TextView android:id="@+id/brandMark" android:layout_width="38dp" android:layout_height="38dp" android:background="#061A2C" android:gravity="center" android:text="AE" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="9dp" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AETHERPS3" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="PLAY BEYOND" android:textColor="#7891A8" android:textSize="6sp" />
                 </LinearLayout>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/navHome"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginTop="8dp"
-                android:background="#102B44"
-                android:gravity="center_vertical"
-                android:paddingStart="12dp"
-                android:text="⌂   Home"
-                android:textColor="@android:color/white"
-                android:textSize="11sp"
-                android:clickable="true"
-                android:focusable="true" />
-
+            <TextView android:id="@+id/navHome" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="8dp" android:background="#102B44" android:gravity="center_vertical" android:paddingStart="12dp" android:text="⌂   Home" android:textColor="@android:color/white" android:textSize="11sp" android:clickable="true" android:focusable="true" />
             <TextView android:id="@+id/navGames" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="4dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="🎮   Games" android:textColor="#91A8BF" android:textSize="11sp" android:clickable="true" android:focusable="true" />
             <TextView android:id="@+id/navLibrary" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="4dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="▣   Library" android:textColor="#91A8BF" android:textSize="11sp" android:clickable="true" android:focusable="true" />
             <TextView android:id="@+id/navDownloads" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="4dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="⇩   Downloads" android:textColor="#91A8BF" android:textSize="11sp" android:clickable="true" android:focusable="true" />
             <TextView android:id="@+id/navSettings" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="4dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="⚙   Settings" android:textColor="#91A8BF" android:textSize="11sp" android:clickable="true" android:focusable="true" />
             <TextView android:id="@+id/navAbout" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="4dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="ⓘ   About" android:textColor="#91A8BF" android:textSize="11sp" android:clickable="true" android:focusable="true" />
 
-            <TextView
-                android:id="@+id/versionText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="auto"
-                android:padding="8dp"
-                android:textColor="#637991"
-                android:textSize="8sp"
-                tools:text="AetherPS3 v0.1.0" />
+            <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+            <TextView android:id="@+id/versionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:textColor="#637991" android:textSize="8sp" tools:text="AetherPS3 v0.1.0" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,41 +55,25 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:padding="18dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
                     <TextView android:id="@+id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Welcome Back!" android:textColor="@android:color/white" android:textSize="24sp" android:textStyle="bold" />
                     <TextView android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Play your favorite PS3 games on Android." android:textColor="#91A8BF" android:textSize="11sp" />
                 </LinearLayout>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="● Emulator Ready" android:textColor="#45D98D" android:textSize="8sp" />
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/homeHero"
-                android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:layout_marginTop="14dp"
-                android:background="#0A1B2D"
-                android:gravity="center_vertical"
-                android:orientation="vertical"
-                android:padding="23dp">
+            <LinearLayout android:id="@+id/homeHero" android:layout_width="match_parent" android:layout_height="190dp" android:layout_marginTop="14dp" android:background="#0A1B2D" android:gravity="center_vertical" android:orientation="vertical" android:padding="23dp">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AETHERPS3 · PLAY BEYOND" android:textColor="#54ADFF" android:textSize="8sp" android:textStyle="bold" />
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Greater Games. Anywhere." android:textColor="@android:color/white" android:textSize="27sp" android:textStyle="bold" />
                 <TextView android:layout_width="460dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="A premium PS3 emulation experience built for Android. Powerful when your device allows it, clean and responsive everywhere." android:textColor="#9AAFC2" android:textSize="11sp" />
                 <Button android:id="@+id/browseGamesButton" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginTop="13dp" android:minWidth="0dp" android:paddingStart="17dp" android:paddingEnd="17dp" android:text="Browse Games  →" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#087FF1" />
             </LinearLayout>
-
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
                 <Button android:id="@+id/addGameButton" android:layout_width="0dp" android:layout_height="68dp" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="📁\nAdd Game\nSelect a game file" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#0B1D30" />
-                <Button android:id="@+id/scanButton" android:layout_width="0dp" android:layout_height="68dp" android:layout_weight="1" android:layout_marginStart="4dp" android:layoutEnd="4dp" android:text="💿\nScan Library\nFind PS3 games" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#0B1D30" />
-                <Button android:id="@+id/configureButton" android:layout_width="0dp" android:layout_height="68dp" android:layout_weight="1" android:layout_marginStart="4dp" android:layoutEnd="4dp" android:text="⚙\nConfigure\nOptimize emulator" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#0B1D30" />
+                <Button android:id="@+id/scanButton" android:layout_width="0dp" android:layout_height="68dp" android:layout_weight="1" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:text="💿\nScan Library\nFind PS3 games" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#0B1D30" />
+                <Button android:id="@+id/configureButton" android:layout_width="0dp" android:layout_height="68dp" android:layout_weight="1" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:text="⚙\nConfigure\nOptimize emulator" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#0B1D30" />
                 <Button android:id="@+id/resumeButton" android:layout_width="0dp" android:layout_height="68dp" android:layout_weight="1" android:layout_marginStart="4dp" android:text="▶\nResume\nContinue playing" android:textAllCaps="false" android:textColor="@android:color/white" android:backgroundTint="#0B1D30" />
             </LinearLayout>
-
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="Recent Games" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
             <HorizontalScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp" android:scrollbars="none">
                 <LinearLayout android:id="@+id/recentGamesRow" android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal" />
