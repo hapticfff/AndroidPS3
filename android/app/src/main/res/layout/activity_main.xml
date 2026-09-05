@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="24dp" android:gravity="center">
-    <TextView android:id="@+id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="22sp" android:textStyle="bold" android:text="@string/app_name" />
-    <TextView android:id="@+id/versionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
-    <TextView android:id="@+id/statusLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/status_label" />
-    <TextView android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:fontFamily="monospace" />
-</LinearLayout>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/aether_bg">
+    <LinearLayout android:layout_width="190dp" android:layout_height="match_parent" android:orientation="vertical" android:padding="18dp" android:background="@color/aether_panel">
+        <TextView android:id="@+id/brandText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="AETHERPS3" android:textColor="@color/aether_text" android:textSize="21sp" android:textStyle="bold" android:letterSpacing="0.08" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="PLAYSTATION 3 EMULATOR" android:textColor="@color/aether_muted" android:textSize="8sp" android:letterSpacing="0.12" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="22dp" android:background="@color/aether_line" />
+        <TextView android:id="@+id/navHome" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="14dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="HOME" android:textColor="@color/aether_text" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/navGames" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="GAMES" android:textColor="@color/aether_muted" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/navDownloads" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="DOWNLOADS" android:textColor="@color/aether_muted" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/navSettings" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="SETTINGS" android:textColor="@color/aether_muted" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/navAbout" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="ABOUT" android:textColor="@color/aether_muted" android:textSize="13sp" android:textStyle="bold" />
+        <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+        <TextView android:id="@+id/versionText" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/aether_muted" android:textSize="9sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="ARM64 • VULKAN" android:textColor="@color/aether_blue" android:textSize="9sp" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="190dp" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="34dp">
+            <TextView android:id="@+id/pageEyebrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AETHERPS3 • EMULATOR FRONTEND" android:textColor="@color/aether_blue" android:textSize="10sp" android:textStyle="bold" android:letterSpacing="0.1" />
+            <TextView android:id="@+id/pageTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Welcome back" android:textColor="@color/aether_text" android:textSize="31sp" android:textStyle="bold" />
+            <TextView android:id="@+id/pageSubtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Your PlayStation 3 library, settings and emulator controls in one place." android:textColor="@color/aether_muted" android:textSize="13sp" />
+            <LinearLayout android:id="@+id/homePanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:orientation="vertical" android:padding="24dp" android:background="@color/aether_panel_2">
+                <TextView android:id="@+id/heroTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="No games added yet" android:textColor="@color/aether_text" android:textSize="24sp" android:textStyle="bold" />
+                <TextView android:id="@+id/heroBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Add a legally obtained PS3 game folder or disc dump to begin building your library." android:textColor="@color/aether_muted" android:textSize="13sp" />
+                <Button android:id="@+id/addGameButton" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginTop="20dp" android:text="ADD GAME" android:textStyle="bold" android:textColor="@color/aether_text" android:backgroundTint="@color/aether_blue_dim" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/statusPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" android:padding="20dp" android:background="@color/aether_panel">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CORE STATUS" android:textColor="@color/aether_muted" android:textSize="10sp" android:textStyle="bold" />
+                <TextView android:id="@+id/statusText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:fontFamily="monospace" android:textColor="@color/aether_success" android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/settingsPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" android:padding="20dp" android:background="@color/aether_panel" android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EMULATOR SETTINGS" android:textColor="@color/aether_text" android:textSize="17sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Graphics\nVulkan renderer • resolution • shader options\n\nController\nDualShock / DualSense mapping • touch controls\n\nAudio\nOutput device • latency • volume\n\nSystem\nFirmware path • storage • logs" android:textColor="@color/aether_muted" android:textSize="13sp" android:lineSpacingExtra="7dp" />
+            </LinearLayout>
+            <TextView android:id="@+id/featureText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="PPU FOUNDATION • MEMORY ROADMAP • VULKAN ROADMAP" android:textColor="@color/aether_muted" android:textSize="9sp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
