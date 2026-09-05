@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aether_bg">#020810</color>
+    <color name="aether_panel">#071522</color>
+    <color name="aether_panel_2">#0A1B2D</color>
+    <color name="aether_blue">#118CFF</color>
+    <color name="aether_blue_dark">#0873E4</color>
+    <color name="aether_line">#173B5D</color>
+    <color name="aether_text">#EEF6FF</color>
+    <color name="aether_muted">#91A8BF</color>
+    <color name="aether_success">#45D98D</color>
+</resources>
