@@ -2,9 +2,9 @@ name: AndroidPS3 CI
 
 on:
   push:
-    branches: ["main", "milestone-2"]
+    branches: ["main", "milestone-2", "milestone-4-memory"]
   pull_request:
-    branches: ["main", "milestone-2"]
+    branches: ["main", "milestone-2", "milestone-4-memory"]
   workflow_dispatch:
 
 jobs:
