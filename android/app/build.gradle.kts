@@ -9,10 +9,11 @@ android {
     ndkVersion = "26.3.11579264"
     defaultConfig {
         applicationId = "org.androidps3.app"
+        compileSdk = 34
         minSdk = 28
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.0.1-milestone2"
+        versionCode = 2
+        versionName = "0.0.2-aether-library"
         ndk { abiFilters += listOf("arm64-v8a") }
         externalNativeBuild { cmake { arguments += listOf("-DANDROID_STL=c++_shared", "-DANDROIDPS3_BUILD_TESTS=OFF"); cppFlags += listOf("-std=c++20") } }
     }
@@ -25,5 +26,6 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.documentfile:documentfile:1.0.1")
     implementation("com.google.android.material:material:1.12.0")
 }
