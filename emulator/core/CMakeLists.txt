@@ -4,12 +4,13 @@ add_library(emulator_core STATIC
     src/EmulatorCore.cpp
     src/logging/Logger.cpp
     src/config/Config.cpp
+    src/memory/MemoryManager.cpp
     src/cpu/PlaceholderCpu.cpp
     src/cpu/ppu/PPUState.cpp
     src/cpu/ppu/PPUDecoder.cpp
     src/cpu/ppu/PPUInterpreter.cpp
+    src/cpu/ppu/PPUExecutionContext.cpp
     src/cpu/ppu/PPUBackend.cpp
-    src/memory/MemoryManager.cpp
     src/gpu/PlaceholderGpu.cpp
 )
 
