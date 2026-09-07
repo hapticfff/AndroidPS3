@@ -9,6 +9,7 @@ add_executable(androidps3_tests
     test_ppu.cpp
     test_memory.cpp
     test_ppu_memory_execution.cpp
+    test_ppu_load_store.cpp
 )
 
 target_link_libraries(androidps3_tests PRIVATE emulator_core Catch2::Catch2WithMain)
