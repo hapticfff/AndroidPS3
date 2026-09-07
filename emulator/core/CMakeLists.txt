@@ -9,6 +9,7 @@ add_library(emulator_core STATIC
     src/cpu/ppu/PPUDecoder.cpp
     src/cpu/ppu/PPUInterpreter.cpp
     src/cpu/ppu/PPUBackend.cpp
+    src/memory/MemoryManager.cpp
     src/gpu/PlaceholderGpu.cpp
 )
 
