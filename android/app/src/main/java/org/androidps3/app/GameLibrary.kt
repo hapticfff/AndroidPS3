@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.Uri
 import androidx.documentfile.provider.DocumentFile
 
-data class GameEntry(val title: String, val path: String, val type: String)
+data class GameEntry(val title: String, val path: String, val type: String, val source: Uri)
 
 class GameLibrary(private val context: Context) {
     private val prefs = context.getSharedPreferences("aether_library", Context.MODE_PRIVATE)
@@ -20,8 +20,13 @@ class GameLibrary(private val context: Context) {
         val result = mutableListOf<GameEntry>()
         prefs.getStringSet(key, emptySet())!!.forEach { raw ->
             val uri = Uri.parse(raw)
-            val doc = DocumentFile.fromTreeUri(context, uri) ?: return@forEach
-            scanTree(doc, result)
+            val single = DocumentFile.fromSingleUri(context, uri)
+            if (single != null && single.exists() && single.isFile) {
+                addFile(single, result)
+                return@forEach
+            }
+            val tree = DocumentFile.fromTreeUri(context, uri)
+            if (tree != null && tree.exists()) scanTree(tree, result)
         }
         return result.distinctBy { it.path }.sortedBy { it.title.lowercase() }
     }
@@ -30,13 +35,20 @@ class GameLibrary(private val context: Context) {
         val name = root.name.orEmpty()
         val upper = name.uppercase()
         if (root.isDirectory && (upper == "PS3_GAME" || upper.startsWith("PS3_GAME"))) {
-            out += GameEntry(root.parentFile?.name ?: name, root.uri.toString(), "PS3 folder")
+            val title = root.parentFile?.name?.takeIf { it.isNotBlank() } ?: name
+            out += GameEntry(title, root.uri.toString(), "PS3 GAME FOLDER", root.uri)
             return
         }
-        if (root.isFile && (upper.endsWith(".ISO") || upper.endsWith(".PKG"))) {
-            out += GameEntry(name.substringBeforeLast('.'), root.uri.toString(), name.substringAfterLast('.', "file").uppercase())
-            return
+        if (root.isFile) { addFile(root, out); return }
+        if (root.isDirectory) root.listFiles().forEach { scanTree(it, out) }
+    }
+
+    private fun addFile(file: DocumentFile, out: MutableList<GameEntry>) {
+        val name = file.name.orEmpty()
+        val upper = name.uppercase()
+        if (upper.endsWith(".ISO") || upper.endsWith(".PKG")) {
+            val type = name.substringAfterLast('.', "FILE").uppercase()
+            out += GameEntry(name.substringBeforeLast('.'), file.uri.toString(), type, file.uri)
         }
-        if (root.isDirectory) root.listFiles().forEach { child -> scanTree(child, out) }
     }
 }
