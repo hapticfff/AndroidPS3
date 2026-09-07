@@ -4,20 +4,18 @@
 #include <string>
 #include "emulator/core/cpu/ppu/PPUDecoder.h"
 #include "emulator/core/cpu/ppu/PPUState.h"
+#include "emulator/core/memory/MemoryManager.h"
 
 namespace emu::cpu::ppu {
 
-enum class PPUExecutionResult {
-    Executed,
-    UnsupportedInstruction
-};
+enum class PPUExecutionResult { Executed, UnsupportedInstruction };
 
 class PPUInterpreter {
 public:
     PPUInterpreter();
-
     void Reset();
     PPUExecutionResult Step(std::uint32_t raw);
+    PPUExecutionResult Step(std::uint32_t raw, emu::memory::MemoryManager& memory);
 
     PPUState& state() { return state_; }
     const PPUState& state() const { return state_; }
