@@ -15,7 +15,7 @@ PPUExecutionResult PPUExecutionContext::Step() {
         last_error_message_ = memory_.last_error_message().c_str();
         return PPUExecutionResult::UnsupportedInstruction;
     }
-    return interpreter_.Step(instruction);
+    return interpreter_.Step(instruction, memory_);
 }
 
 } // namespace emu::cpu::ppu
