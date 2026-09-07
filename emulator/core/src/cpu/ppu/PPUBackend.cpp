@@ -4,11 +4,8 @@
 
 namespace emu::cpu::ppu {
 
-namespace {
-constexpr std::uint32_t kNopInstruction = 0x60000000u;
-}
-
 bool PPUBackend::Initialize() {
+    memory_.Reset();
     interpreter_.Reset();
     state_ = emu::cpu::BackendState::Ready;
     EMU_LOG_INFO(emu::logging::Category::CPU, "PPUBackend::Initialize");
@@ -35,11 +32,10 @@ bool PPUBackend::Step() {
     }
 
     state_ = emu::cpu::BackendState::Running;
-    const auto result = interpreter_.Step(kNopInstruction);
+    const auto result = execution_context_.Step();
     if (result != PPUExecutionResult::Executed) {
         state_ = emu::cpu::BackendState::Error;
-        EMU_LOG_ERROR(emu::logging::Category::CPU,
-                      "PPUBackend failed to execute its initial NOP step");
+        EMU_LOG_ERROR(emu::logging::Category::CPU, "PPUBackend failed to fetch or execute instruction");
         return false;
     }
     return true;
